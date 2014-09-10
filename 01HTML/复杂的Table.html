@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="zh-cn">
+<head>
+</head>
+<body>
+    <div id="dataListDiv" >
+		<table dir="ltr" width="500" border="1" summary="purpose/structure for speech output">
+			<caption>caption元素定义表格标题。caption 标签必须紧随table标签之后。您只能对每个表格定义一个标题。通常这个标题会被居中于表格之上。</caption>
+			<colgroup width="50%" />
+			<!--colgroup元素为列元素统一指定对齐方式和样式-->
+			<colgroup id="colgroup" class="colgroup" align="center" valign="middle" title="title" width="1*" span="2" style="background:#ddd;" />
+			<thead>
+			<!--<tfoot> 标签定义表格的页脚（脚注或表注）。该标签用于组合 HTML 表格中的表注内容。
+				tfoot 元素应该与 thead 和 tbody 元素结合起来使用。
+				thead 元素用于对 HTML 表格中的表头内容进行分组，而 tbody 元素用于对 HTML 表格中的主体内容进行分组。
+				注释：如果您使用 thead、tfoot 以及 tbody 元素，您就必须使用全部的元素。
+				它们的出现次序是：thead、tfoot、tbody，这样浏览器就可以在收到所有数据前呈现页脚了。
+				您必须在 table 元素内部使用这些标签。-->
+				<tr>
+					<th scope="col">机构名称</th>
+					<th scope="col">仓库编号</th>
+					<th scope="col">仓库名称</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td>Darth Vader</td>
+					<td>Dark</td>
+					<td>Sith</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>Obi Wan Kenobi</td>
+					<td>Light</td>
+					<td>Jedi</td>
+				</tr>
+				<tr>
+					<td>Greedo</td>
+					<td>South</td>
+					<td>Scumbag</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/*为了保证用户体验，所有的视觉样式-内边距、背景、边框等等，都要应用给链接a，而不是ul或者li，以便于热区最大化*/
+
+/*静态样式的设定*/
+.multi-drop-menu ul
+{
+	padding: 0px;	/*清除固定的缩进*/
+	margin:0px;
+	
+}
+
+.multi-drop-menu li
+{
+	float:left;
+	list-style-type:none;	/*清除项目符号*/
+	position:relative;		/*为子菜单的定位提供上下文*/
+}
+
+.multi-drop-menu a
+{
+	display:block;			/*a元素会充满li元素*/
+	text-decoration:none;	/*去掉超链接下划线*/
+	background-color: gray;
+	padding: 0.2em 1em;
+	border-width:3px;
+	border-style:solid;
+	border-color:transparent;
+	background-clip: padding-box;	/*背景色只局限于边框内，不会使边框染色*/
+}
+
+/*子元素会继承父元素的某些属性，因此如果想要子元素有不同的表现，需要对子元素进行修改*/
+.multi-drop-menu li li
+{
+	float:none;	/*清除子li元素的float属性，从而使之能垂直堆叠*/
+}
+
+.multi-drop-menu li ul
+{	
+	width:9em;
+	position:absolute;
+	left:0;	/*三级子菜单将显示在二级子菜单的右侧*/
+	top:100%;		/*三级子菜单将与二级子菜单平齐*/
+}
+
+.multi-drop-menu li li ul
+{	
+	width:9em;
+	position:absolute;
+	left:100%;	/*三级子菜单将显示在二级子菜单的右侧*/
+	top:0;		/*三级子菜单将与二级子菜单平齐*/
+}
+
+/*添加全局动作视觉效果*/
+.multi-drop-menu a:hover	/*悬停效果*/
+{
+	color:#069;
+	background-color: #aaa;
+}
+
+.multi-drop-menu a:active	/*点击效果*/
+{
+	color:#ccc;
+	background: #fff;
+}
+
+/*默认情况下二级菜单及其子菜单是隐藏的*/
+.multi-drop-menu li ul
+{
+	display:none;
+}
+
+
+/*当鼠标悬停在上一级菜单上时，展开子菜单*/
+.multi-drop-menu li:hover > ul	/*hover的触发器是设在li上而非a上，这是因为我们要显示的是li的子元素，而不是a的子元素；如果没有子选择符>，那么在一级菜单悬停时，会同时显示二级和三级菜单*/
+{
+	display:block;
+}
+
+/*高亮选择路径*/
+.multi-drop-menu li:hover > a
+{
+	color:#fff;
+	background-color: #aaa;
+}

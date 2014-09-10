@@ -1,0 +1,94 @@
+﻿form.demo-form{
+	width:16em;	/*表单的宽度*/
+	margin:20px auto;
+	border:1px solid #bbb7ae;
+	padding:0.5em;
+	font-family:"Microsoft YaHei",微软雅黑;
+}
+
+.demo-form fieldset{
+	margin:0;
+	padding:0 0 1em;
+	width:100%;	/*撑开到父级元素的宽度*/
+	border:0;
+}
+
+.demo-form legend{
+	width:100%;
+	background:#bbb7ae;
+}
+
+/*legend元素默认位置是由浏览器中一种未加说明的机制确定的，无法由样式表设定，因此不能通过css来精确控制。解决办法就是把文字放到span中*/
+.demo-form legend span{
+	display:block;
+	line-height:1.6em;
+	color:#fff;
+}
+
+.demo-form section{
+	padding:.2em 0 .4em 0;
+	border-bottom:8px solid #e7e5df;
+}
+
+.demo-form section:last-child{
+	border-bottom:0px;	/*每组最后一个section没有边框*/
+}
+
+.demo-form section label,.demo-form section h4{
+	display:block;	/*将所有的label都设置为块级元素，占满一行*/
+	font-size:1em;
+	font-weight:400;
+	line-height:1.1em;
+}
+
+.demo-form section input, .demo-form section textarea, .demo-form section select{
+	outline:none;	/*去掉默认的蓝色焦点高亮轮廓*/
+}
+
+.demo-form section input, .demo-form section textarea, .demo-form section select{
+	width:16em;	/*input元素的宽度*/
+	border-radius: 3px;
+}
+
+.demo-form section section input{
+	/*单选或复选按钮*/
+	width:auto;	/*清除之前继承的input宽度*/
+	/*margin:.1em 0 0em .3em;*/
+	margin:0;
+	padding:0;
+}
+
+.demo-form section section label{
+	margin:0;
+	padding:0;
+	display:inline;	/*清除继承的块级显示*/
+	/*margin:.15em 0 0 .6em;*/
+}
+
+.demo-form section p.note{	/*提示文字的大小*/
+	font-size: .7em;
+	margin:0;
+	padding:0;
+}
+
+.demo-form section p.error{
+	color:#f00;	/*如果验证出错，那么提示语会变红色*/
+}
+
+.form-btn-box{text-align: center;}
+
+.demo-form .form-btn-box input[type="submit"],.demo-form .form-btn-box input[type="reset"]{
+	width:auto;
+	background-color:#bbb7ae;
+	display:inline-block;
+	margin:auto;
+}
+
+
+
+
+
+
+
+
+

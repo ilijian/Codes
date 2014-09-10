@@ -1,0 +1,42 @@
+
+nav
+{
+	margin:50px;
+}
+
+.nav-list ul
+{
+	border:1px solid #f00;
+	border-radius:3px;
+	padding:5px 10px 5px;
+	overflow:auto;	/*使ul能包住浮动的li元素*/
+	min-width:190px;
+}
+
+.nav-list li
+{
+	float:left;
+	list-style-type:none;
+}
+
+.nav-list li+li a/*非首位元素*/
+{
+	border-left:1px solid #aaa;	/*添加灰色左边框以表示分割线*/
+}
+
+.nav-list a
+{
+	display:block;	/*设置为块级元素，这样a就会填充整个li，在li的任何地方点击都是有效的*/
+	text-decoration:none;	/*去掉超链接下划线*/
+	font:20px;
+	font-weight:400;
+	color:#000;
+	background: #ffed53;
+	padding:3px 10px;
+}
+
+.nav-list a:hover
+{
+	color:#069;
+}
+
